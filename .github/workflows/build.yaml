@@ -19,6 +19,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: use klar
       run: |
-        wget https://github.com/optiopay/klar/releases/download/v2.4.0/klar-2.4.0-linux-amd64 -O klar
+        wget -q https://github.com/optiopay/klar/releases/download/v2.4.0/klar-2.4.0-linux-amd64 -O klar
         chmod +x klar
         CLAIR_OUTPUT=High CLAIR_ADDR=http://clair.3r1.co:6060 ./klar postgres:9.5.1
